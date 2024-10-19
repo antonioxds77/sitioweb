@@ -1,0 +1,172 @@
+/* Reset de márgenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+header {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 20px 40px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+/* Animación de los botones cuando se hace hover */
+.navbar a:hover {
+    background-color: #00aeff; /* Color de fondo al pasar el mouse */
+    color: #333; /* Cambiar el color del texto */
+    transform: scale(1.1); /* Ampliar el tamaño */
+}
+
+/* Animación del texto del botón */
+.navbar a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #2f00ff;
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+/* Animación al pasar el mouse por los botones */
+.navbar a:hover::after {
+    width: 100%;
+}
+body {
+    padding-top: 60px; /* Deja espacio para el encabezado fijo */
+}
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('imagenes/pagina2.jpeg'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    color: rgb(28, 160, 16);
+    text-align: center;
+}
+
+/* Capa semi-transparente para hacer que el texto sea legible */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(187, 128, 19, 0.5); /* Fondo oscuro semi-transparente */
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté encima de la capa oscura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    animation: brillar 2s infinite alternate;
+    margin-bottom: 20px;
+}
+
+/* Animación de brillo del texto */
+@keyframes brillar {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff6f61, 0 0 15px #ff6f61;
+    }
+    100% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff6f61, 0 0 40px #ff6f61;
+    }
+}
+/* Estilo del botón "Volver" */
+/* Estilo del botón "Volver" con posición fija */
+/* Contenedor del botón "Volver" con posición fija */
+.volver-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+/* Estilo mejorado del botón "Volver" */
+.btn-volver {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ad2317;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: bounceIn 1s ease; /* Animación inicial */
+}
+
+/* Efecto de hover para cambiar el color y hacer crecer el botón */
+.btn-volver:hover {
+    background-color: #ffd700; /* Cambia a dorado */
+    transform: translateY(-5px) scale(1.1); /* Efecto de levantamiento y crecimiento */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Sombras más profundas */
+}
+
+/* Animación de rebote cuando el botón aparece en la página */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

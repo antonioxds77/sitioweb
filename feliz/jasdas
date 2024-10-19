@@ -1,0 +1,19 @@
+<div class="item">
+    <div class="content">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <span><img src="./imagenes/imagen1.jpg" alt=""></span>
+              </div>
+              <div class="swiper-slide">
+                <span><img src="./imagenes/imagen2.jpg" alt=""></span>
+              </div>
+              <div class="swiper-slide">
+                <span><img src="./imagenes/imagen3.jpg" alt=""></span>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </div>
+</div>
+</div>
